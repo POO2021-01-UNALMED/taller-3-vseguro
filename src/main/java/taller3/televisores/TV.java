@@ -7,9 +7,9 @@ public class TV {
 	boolean estado;
 	int volumen=1;
 	Control control;
-	static TV numTV;
+	static int numTV;
 	
-	public TV(Marca marca, boolean estado){ //constructor
+	public TV(Marca marca, boolean estado ){ //constructor
 		this.marca=marca;
 		this.estado=estado;
 	}
@@ -17,34 +17,52 @@ public class TV {
 	public Marca getMarca() {
 		return marca;
 	}
+	void setMarca(Marca marca) {
+		this.marca=marca;
+	}
 	
 	public Control getControl() {
 		return control;
 	} 
+	void setControl(Control control) {
+		this.control=control;
+	}
 	
-	public void setprecio(int precio) {
+	int getPrecio() {
+		return precio;
+	}
+	public void setPrecio(int precio) {
 		this.precio=precio;
 	}
 	
-	public void setvolumen(int volumen) {
+	int getVolumen() {
+		return volumen;
+	}
+	
+	public void setVolumen(int volumen) {
 		this.volumen=volumen;
 	}
 	
-	public void setcanal(int canal) {
+	int getCanal() {
+		return canal;
+	}
+	
+
+	public void setCanal(int canal) {
 		this.canal=canal;
 	}
 	
-	static void setnumTV(TV numTV) {
-		numTV=numTV;   //????????????
+	public static int getnumTV() {
+		return numTV;   //????????????
 	}
 	
-	void turnOn(boolean estado) {
+	void turnOn() {
 		if (estado) {
 			estado=true;
 		}
 	}
 	
-	void turnOff(boolean estado) {
+	void turnOff() {
 		return;
 	}
 	
@@ -52,10 +70,7 @@ public class TV {
 		return estado;
 	}
 	
-    void canalUp(int canal) {
-    	if (estado) {
-    		return;   
-    	}
+    void canalUp() {
     	if (estado) {
     		return;   
     	}
@@ -65,17 +80,17 @@ public class TV {
     	++canal;
     }
     
-    void canalDown(int canal) {
+    void canalDown() {
     	if (estado) {
     		return;   
     	}
-    	if (canal<-1) {
+    	if (canal<1) {
     		return;
     	}
     	--canal;
     }
     
-    void volumenUp(int volumen) {
+    void volumenUp() {
     	if (estado) {
     		return;   
     	}
@@ -85,7 +100,7 @@ public class TV {
     	++volumen;
     }
     
-    void volumenDown(int volumen) {
+    void volumenDown() {
     	if (estado) {
     		return;   
     	}

@@ -5,8 +5,11 @@ public class Marca {
 	
 	public void setNombre(String nombre) {
 		this.nombre=nombre;
-		
-	}
+	}	
+    String getNombre() {
+		return nombre;
+	}	
+	
 	Marca(String nombre){
 		this.nombre=nombre;
 		
