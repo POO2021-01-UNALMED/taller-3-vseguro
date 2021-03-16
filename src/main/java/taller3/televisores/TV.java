@@ -82,7 +82,7 @@ public class TV {
     	if (canal>120){
     		return;
     	}    	
-    	++canal;
+    	canal=canal+1;
     }
     
     public void canalDown() {
@@ -92,7 +92,7 @@ public class TV {
     	if (canal<1) {
     		return;
     	}
-    	--canal;
+    	canal=canal-1;
     }
     
     public void volumenUp() {
