@@ -42,6 +42,9 @@ public class TV {
 	}
 	
 	public void setVolumen(int volumen) {
+		if (estado==false) {
+			return;
+		}
 		if ((volumen<0)||(volumen>7)){
 		return;
 	}
@@ -54,6 +57,9 @@ public class TV {
 	
 
 	public void setCanal(int canal) {
+		if (estado==false) {
+			return;
+		}
 		if ((canal<0)||(canal>120)) {
 			return;
 		}

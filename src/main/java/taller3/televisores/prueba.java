@@ -3,15 +3,30 @@ package taller3.televisores;
 public class prueba {
 
 	public static void main(String[] args) {
-        TV.setNumTV(0);
-		
 		Marca marca =  new Marca("Semsung");
-	   
 		TV tv1 =  new TV(marca, true);
-		TV tv2 =  new TV(marca, true);
-		TV tv3 =  new TV(marca, true);
 		
-		System.out.print(TV.getNumTV());
+		tv1.setCanal(100);
+		tv1.canalDown();
+		
+		TV tv2 =  new TV(marca, false);
+		Control control =  new Control();
+		control.enlazar(tv2);
+		control.setCanal(50);
+		control.turnOn();
+		control.canalUp();
+		
+		TV tv3 =  new TV(marca, false);
+		tv2.setCanal(121);
+		
+		//boolean ok = false;
+		 System.out.println(tv1.getCanal());
+		 System.out.println(tv2.getCanal());
+		 System.out.println(tv3.getCanal());
+		 //System.out.println(tv1.getCanal());
+		/*if(tv1.getCanal() == 99 && tv2.getCanal() == 2 && tv3.getCanal() == 1) {
+			ok = true;
+		}*/
 	}
 
 }
