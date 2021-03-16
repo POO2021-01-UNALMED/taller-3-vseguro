@@ -12,6 +12,7 @@ public class TV {
 	public TV(Marca marca, boolean estado ){ //constructor
 		this.marca=marca;
 		this.estado=estado;
+		TV.numTV++;
 	}
 	
 	public Marca getMarca() {
@@ -52,68 +53,14 @@ public class TV {
 	public void setCanal(int canal) {
 		this.canal=canal;
 	}
-	
-	public static int setNumTV(int numTV) {
-		return numTV;   //????????????
-	}
-	
+		
 	public static int getNumTV() {
 		return numTV;  
-	}
-	
-	public void turnOn() {
-		if (estado==false) {
-			estado=true;
-		}
-	}
-	
-	public void turnOff() {
-		if (estado==true) {
-			estado=false;
-		}
 	}
 	
 	public boolean getEstado() {
 		return estado;
 	}
 	
-    public void canalUp() {
-    	if (estado==false) {
-    		return;   
-    	}
-    	if (canal>120){
-    		return;
-    	}    	
-    	++canal;
-    }
-    
-    public void canalDown() {
-    	if (estado==false) {
-    		return;   
-    	}
-    	if (canal<1) {
-    		return;
-    	}
-    	--canal;
-    }
-    
-    public void volumenUp() {
-    	if (estado==false) {
-    		return;   
-    	}
-    	if (volumen>7) {
-    		return;
-    	}
-    	++volumen;
-    }
-    
-    public void volumenDown() {
-    	if (estado==false) {
-    		return;   
-    	}
-    	if (volumen<0) {
-    		return;
-    	}
-    	--volumen;
-    }
+	
 }

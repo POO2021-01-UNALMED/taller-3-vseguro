@@ -32,9 +32,9 @@ public class Control {
 	    	if (tv.estado==false) {
 	    		return;   
 	    	}
-	    	if (tv.canal>120){
+	    	/*if (tv.canal>120){
 	    		return;
-	    	}    	
+	    	}  */  	
 	    	++tv.canal;
 	    }
 	 
