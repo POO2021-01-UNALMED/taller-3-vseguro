@@ -13,17 +13,21 @@ public class TestTV {
 	    tv1.setCanal(121);
 		tv2.setVolumen(7);		
 		Control control1 = new Control();
+		Control control2 = new Control();
 		control1.enlazar(tv1);
 		control1.turnOff();
 		control1.setCanal(50);
 		control1.turnOn();
 		control1.canalDown();
 		control1.volumenUp();
+		control2.enlazar(tv2);
+		control2.turnOn();
 		
+	
 	    System.out.println(tv2.getEstado());
 	    System.out.println(tv1.getPrecio());
 	    System.out.println(tv1.getMarca().getNombre());
 	    System.out.println(tv1.getCanal());
-	    System.out.println(tv1.getNumTV());
+	    System.out.println(tv2.getNumTV());
 	}
 }
