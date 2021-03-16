@@ -17,17 +17,19 @@ public class Control {
 	}
 	
 	public void turnOn() {
-		if (tv.estado) {
+		if (tv.estado==false) {
 			tv.estado=true;
 		}
 	}
 	
 	public void turnOff() {
-		return;
+		if (tv.estado==true) {
+			tv.estado=false;
+		}
 	}
 	
 	 public void canalUp() {
-	    	if (tv.estado) {
+	    	if (tv.estado==false) {
 	    		return;   
 	    	}
 	    	if (tv.canal>120){
@@ -37,7 +39,7 @@ public class Control {
 	    }
 	 
 	 public void canalDown() {
-	    	if (tv.estado) {
+	    	if (tv.estado==false) {
 	    		return;   
 	    	}
 	    	if (tv.canal<1) {
@@ -47,7 +49,7 @@ public class Control {
 	    }
 	    
 	    public void volumenUp() {
-	    	if (tv.estado) {
+	    	if (tv.estado==false) {
 	    		return;   
 	    	}
 	    	if (tv.volumen>7) {
@@ -57,7 +59,7 @@ public class Control {
 	    }
 	    
 	    public void volumenDown() {
-	    	if (tv.estado) {
+	    	if (tv.estado==false) {
 	    		return;   
 	    	}
 	    	if (tv.volumen<0) {

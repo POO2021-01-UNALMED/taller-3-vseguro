@@ -17,12 +17,12 @@ public class TestTV {
 		control1.turnOff();
 		control1.setCanal(50);
 		control1.turnOn();
-		control1.canalUp();
+		control1.canalDown();
 		control1.volumenUp();
 		
 	    System.out.println(tv2.getCanal());
 	    System.out.println(tv1.getPrecio());
 	    System.out.println(tv1.getMarca().getNombre());
-	    System.out.println(tv1.getCanal());
+	    System.out.println(tv1.getVolumen());
 	}
 }

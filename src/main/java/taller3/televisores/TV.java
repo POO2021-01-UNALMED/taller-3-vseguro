@@ -62,13 +62,15 @@ public class TV {
 	}
 	
 	public void turnOn() {
-		if (estado) {
+		if (estado==false) {
 			estado=true;
 		}
 	}
 	
 	public void turnOff() {
-		return;
+		if (estado==true) {
+			estado=false;
+		}
 	}
 	
 	public boolean getEstado() {
@@ -76,27 +78,27 @@ public class TV {
 	}
 	
     public void canalUp() {
-    	if (estado) {
+    	if (estado==false) {
     		return;   
     	}
     	if (canal>120){
     		return;
     	}    	
-    	canal=canal+1;
+    	++canal;
     }
     
     public void canalDown() {
-    	if (estado) {
+    	if (estado==false) {
     		return;   
     	}
     	if (canal<1) {
     		return;
     	}
-    	canal=canal-1;
+    	--canal;
     }
     
     public void volumenUp() {
-    	if (estado) {
+    	if (estado==false) {
     		return;   
     	}
     	if (volumen>7) {
@@ -106,7 +108,7 @@ public class TV {
     }
     
     public void volumenDown() {
-    	if (estado) {
+    	if (estado==false) {
     		return;   
     	}
     	if (volumen<0) {
