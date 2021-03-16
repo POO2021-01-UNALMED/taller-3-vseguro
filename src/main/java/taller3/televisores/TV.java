@@ -12,7 +12,7 @@ public class TV {
 	public TV(Marca marca, boolean estado ){ //constructor
 		this.marca=marca;
 		this.estado=estado;
-		TV.numTV++;
+		//TV.numTV++;
 	}
 	
 	public Marca getMarca() {
