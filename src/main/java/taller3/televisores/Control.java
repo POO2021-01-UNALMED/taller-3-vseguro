@@ -1,7 +1,7 @@
 package taller3.televisores;
 
 public class Control {
-	TV tv;
+	private TV tv;
 	
 	 public void enlazar(TV tv){
 		this.tv=tv;
@@ -16,17 +16,17 @@ public class Control {
 		return tv;
 	}
 	
-	void turnOn() {
+	public void turnOn() {
 		if (tv.estado) {
 			tv.estado=true;
 		}
 	}
 	
-	void turnOff() {
+	public void turnOff() {
 		return;
 	}
 	
-	 void canalUp() {
+	 public void canalUp() {
 	    	if (tv.estado) {
 	    		return;   
 	    	}
@@ -36,7 +36,7 @@ public class Control {
 	    	++tv.canal;
 	    }
 	 
-	 void canalDown() {
+	 public void canalDown() {
 	    	if (tv.estado) {
 	    		return;   
 	    	}
@@ -46,7 +46,7 @@ public class Control {
 	    	--tv.canal;
 	    }
 	    
-	    void volumenUp() {
+	    public void volumenUp() {
 	    	if (tv.estado) {
 	    		return;   
 	    	}
@@ -56,7 +56,7 @@ public class Control {
 	    	++tv.volumen;
 	    }
 	    
-	    void volumenDown() {
+	    public void volumenDown() {
 	    	if (tv.estado) {
 	    		return;   
 	    	}
