@@ -115,7 +115,7 @@ public class TV {
     	if (estado==false) {
     		return;   
     	}
-    	if (volumen>7) {
+    	if (volumen>=7) {
     		return;
     	}
     	++volumen;
