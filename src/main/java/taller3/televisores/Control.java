@@ -49,7 +49,8 @@ public class Control {
 	    	--tv.canal;
 	    }
 	    
-	    public void volumenUp() {
+	  
+	     public void volumenUp() {
 	    	if (tv.estado==false) {
 	    		return;   
 	    	}
