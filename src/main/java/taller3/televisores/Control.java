@@ -8,11 +8,11 @@ public class Control {
 		tv.control=this;
 	}
 
-	void setEnlazar(TV tv) {
+	public void setTv(TV tv) {
 		this.tv=tv;
 	}
 	
-	TV getEnlazar() {
+	public TV getTv() {
 		return tv;
 	}
 	
