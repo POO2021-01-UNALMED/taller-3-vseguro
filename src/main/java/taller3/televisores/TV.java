@@ -95,7 +95,7 @@ public class TV {
     	if (estado==false) {
     		return;   
     	}
-    	if (canal>120){
+    	if (canal>=120){
     		return;
     	}    	
     	++canal;
@@ -105,7 +105,7 @@ public class TV {
     	if (estado==false) {
     		return;   
     	}
-    	if (canal<1) {
+    	if (canal<=1) {
     		return;
     	}
     	--canal;
@@ -125,7 +125,7 @@ public class TV {
     	if (estado==false) {
     		return;   
     	}
-    	if (volumen<0) {
+    	if (volumen<=0) {
     		return;
     	}
     	--volumen;
